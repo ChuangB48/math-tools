@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+	<title>
+		Unit Conversion
+	</title>
+	<head>
+		<span style="font-size: 3em;">
+            Unit conversion
+        </span>
+	</head>
+	<body>
+		<div style="border:2px red solid;">
+			<a href="https://www.wikiwand.com/zh-tw/%E7%9A%AE%E7%B1%B3">皮米(pm)</a>:<input type="number" id="pm" onkeyup="javascript:pm()" onchange="javascript:pm()">
+		</div>
+		<div style="border:2px red solid;">
+			<a href="https://www.wikiwand.com/zh-tw/%E5%A5%88%E7%B1%B3">奈米(nm)</a>:<input type="number" id="nm" onkeyup="javascript:nm()" onchange="javascript:nm()">
+		</div>
+		<div style="border:2px red solid;">
+			<a href="https://www.wikiwand.com/zh-tw/%E5%BE%AE%E7%B1%B3">微米(um)</a>:<input type="number" id="um" onkeyup="javascript:um()" onchange="javascript:um()">
+		</div>
+		<div style="border:2px red solid;">
+			<a href="https://www.wikiwand.com/zh-tw/%E6%AF%AB%E7%B1%B3">毫米(mm)</a>:<input type="number" id="mm" onkeyup="javascript:mm()" onchange="javascript:mm()">
+		</div>
+		<div style="border:2px red solid;">
+			<a href="https://www.wikiwand.com/zh-tw/%E5%85%AC%E5%88%86">公分(cm)</a>:<input type="number" id="cm" onkeyup="javascript:cm()" onchange="javascript:cm()">
+		</div>
+		<div style="border:2px red solid;">
+			<a href="https://www.wikiwand.com/zh-tw/%E8%8B%B1%E5%90%8B">英寸(inch)</a>:<input type="number" id="inch" onkeyup="javascript:inch()" onchange="javascript:inch()">
+		</div>
+		<div style="border:2px red solid;">
+			<a href="https://www.wikiwand.com/zh-tw/%E8%8B%B1%E5%B0%BA">英尺(ft)</a>:<input type="number" id="ft" onkeyup="javascript:ft()" onchange="javascript:ft()">
+		</div>
+		<div style="border:2px red solid;">
+			<a href="https://www.wikiwand.com/zh-tw/%E7%A2%BC">碼(yd)</a>:<input type="number" id="yd" onkeyup="javascript:yd()" onchange="javascript:yd()">
+		</div>
+		<div style="border:2px red solid;">
+			<a href="https://www.wikiwand.com/zh-tw/%E5%85%AC%E5%B0%BA">公尺(m)</a>:<input type="number" id="m" onkeyup="javascript:m()" onchange="javascript:m()">
+		</div>
+		<div style="border:2px red solid;">
+			<a href="https://www.wikiwand.com/zh-tw/%E5%85%AC%E9%87%8C">公里(km)</a>:<input type="number" id="km" onkeyup="javascript:km()" onchange="javascript:km()">
+		</div>
+		<div style="border:2px red solid;">
+			<a href="https://www.wikiwand.com/zh-tw/%E8%8B%B1%E9%87%8C">英里(mi)</a>:<input type="number" id="mi" onkeyup="javascript:mi()" onchange="javascript:mi()">
+		</div>
+		<div style="border:2px red solid;">
+			<a href="https://www.wikiwand.com/zh-tw/%E6%B5%B7%E9%87%8C">海里(n_mile)</a>:<input type="number" id="n_mile" onkeyup="javascript:n_mile()" onchange="javascript:n_mile()">
+		</div>
+		<div style="border:2px red solid;">
+			<a href="https://www.wikiwand.com/zh-tw/%E5%85%89%E7%A7%92">光秒(ls)</a>:<input type="number" id="ls" onkeyup="javascript:ls()" onchange="javascript:ls()">
+		</div>
+		<div style="border:2px red solid;">
+			<a href="https://www.wikiwand.com/zh-tw/%E5%85%89%E5%88%86">光分(lm)</a>:<input type="number" id="lm" onkeyup="javascript:lm()" onchange="javascript:lm()">
+		</div>
+		<div style="border:2px red solid;">
+			<a href="https://www.wikiwand.com/zh-tw/%E5%A4%A9%E6%96%87%E5%96%AE%E4%BD%8D">天文單位(AU)</a>:<input type="number" id="AU" onkeyup="javascript:AU()" onchange="javascript:AU()">
+		</div>
+		<div style="border:2px red solid;">
+			<a href="https://www.wikiwand.com/zh-tw/%E5%85%89%E5%B9%B4">光年(ly)</a>:<input type="number" id="ly" onkeyup="javascript:ly()" onchange="javascript:ly()">
+		</div>
+		<div style="border:2px red solid;">
+			<a href="https://www.wikiwand.com/zh-tw/%E7%A7%92%E5%B7%AE%E8%B7%9D">秒差距(pc)</a>:<input type="number" id="pc" onkeyup="javascript:pc()" onchange="javascript:pc()">
+		</div>
+		<br><br>
+		<a href="main.html">back</a>
+	</body>
+</html>
+<script>
+	function pm(){
+		var pm = document.getElementById('pm');
+		var nm = document.getElementById('nm');
+		var um = document.getElementById('um');
+		var mm = document.getElementById('mm');
+		var cm = document.getElementById('cm');
+		var inch = document.getElementById('inch');
+		var ft = document.getElementById('ft');
+		var yd = document.getElementById('yd');
+		var m = document.getElementById('m');
+		var km = document.getElementById('km');
+		var mi = document.getElementById('mi');
+		var n_mile = document.getElementById('n_mile');
+		var ls = document.getElementById('ls');
+		var lm = document.getElementById('lm');
+		var AU = document.getElementById('AU');
+		var ly = document.getElementById('ly');
+		var pc = document.getElementById('pc');
+		pm.value = eval(pm.value) / 1;
+		nm.value = eval(pm.value) / 1000;
+		um.value = eval(pm.value) / 1000000;
+		mm.value = eval(pm.value) / 1000000000;
+		cm.value = eval(pm.value) / 10000000000;
+		inch.value = eval(pm.value) / 25400000000;
+		ft.value = eval(pm.value) / 304800000000;
+		yd.value = eval(pm.value) / 914400000000;
+		m.value = eval(pm.value) / 1000000000000;
+		km.value = eval(pm.value) / 1000000000000000;
+		mi.value = eval(pm.value) / 1609344000000000;
+		n_mile.value = eval(pm.value) / 1852000000000000;
+		ls.value = eval(pm.value) / 299792458000000024576;
+		lm.value = eval(pm.value) / 17987547479999999115264;
+		AU.value = eval(pm.value) / 149597870699999995625472;
+		ly.value = eval(pm.value) / 9460730472580799859370491904;
+		pc.value = eval(pm.value) / 30856775814671917084458352640;
+	}
+	function nm(){
+		var pm = document.getElementById('pm');
+		var nm = document.getElementById('nm');
+		var um = document.getElementById('um');
+		var mm = document.getElementById('mm');
+		var cm = document.getElementById('cm');
+		var inch = document.getElementById('inch');
+		var ft = document.getElementById('ft');
+		var yd = document.getElementById('yd');
+		var m = document.getElementById('m');
+		var km = document.getElementById('km');
+		var mi = document.getElementById('mi');
+		var n_mile = document.getElementById('n_mile');
+		var ls = document.getElementById('ls');
+		var lm = document.getElementById('lm');
+		var AU = document.getElementById('AU');
+		var ly = document.getElementById('ly');
+		var pc = document.getElementById('pc');
+		pm.value = eval(nm.value) / 0.001;
+		nm.value = eval(nm.value) / 1;
+		um.value = eval(nm.value) / 1000;
+		mm.value = eval(nm.value) / 1000000;
+		cm.value = eval(nm.value) / 10000000;
+		inch.value = eval(nm.value) / 25400000;
+		ft.value = eval(nm.value) / 304800000;
+		yd.value = eval(nm.value) / 914400000;
+		m.value = eval(nm.value) / 1000000000;
+		km.value = eval(nm.value) / 1000000000000;
+		mi.value = eval(nm.value) / 1609344000000;
+		n_mile.value = eval(nm.value) / 1852000000000;
+		ls.value = eval(nm.value) / 299792458000000000;
+		lm.value = eval(nm.value) / 17987547480000000000;
+		AU.value = eval(nm.value) / 149597870699999985664;
+		ly.value = eval(nm.value) / 9460730472580799541542912;
+		pc.value = eval(nm.value) / 30856775814671917771653120;
+	}
+	function um(){
+		var pm = document.getElementById('pm');
+		var nm = document.getElementById('nm');
+		var um = document.getElementById('um');
+		var mm = document.getElementById('mm');
+		var cm = document.getElementById('cm');
+		var inch = document.getElementById('inch');
+		var ft = document.getElementById('ft');
+		var yd = document.getElementById('yd');
+		var m = document.getElementById('m');
+		var km = document.getElementById('km');
+		var mi = document.getElementById('mi');
+		var n_mile = document.getElementById('n_mile');
+		var ls = document.getElementById('ls');
+		var lm = document.getElementById('lm');
+		var AU = document.getElementById('AU');
+		var ly = document.getElementById('ly');
+		var pc = document.getElementById('pc');
+		pm.value = eval(um.value) / 0.000001;
+		nm.value = eval(um.value) / 0.001;
+		um.value = eval(um.value) / 1;
+		mm.value = eval(um.value) / 1000;
+		cm.value = eval(um.value) / 10000;
+		inch.value = eval(um.value) / 25400;
+		ft.value = eval(um.value) / 304800;
+		yd.value = eval(um.value) / 914400;
+		m.value = eval(um.value) / 1000000;
+		km.value = eval(um.value) / 1000000000;
+		mi.value = eval(um.value) / 1609344000;
+		n_mile.value = eval(um.value) / 1852000000;
+		ls.value = eval(um.value) / 299792458000000;
+		lm.value = eval(um.value) / 17987547480000000;
+		AU.value = eval(um.value) / 149597870700000000;
+		ly.value = eval(um.value) / 9460730472580799004672;
+		pc.value = eval(um.value) / 30856775814671916597248;
+	}
+	function mm(){
+		var pm = document.getElementById('pm');
+		var nm = document.getElementById('nm');
+		var um = document.getElementById('um');
+		var mm = document.getElementById('mm');
+		var cm = document.getElementById('cm');
+		var inch = document.getElementById('inch');
+		var ft = document.getElementById('ft');
+		var yd = document.getElementById('yd');
+		var m = document.getElementById('m');
+		var km = document.getElementById('km');
+		var mi = document.getElementById('mi');
+		var n_mile = document.getElementById('n_mile');
+		var ls = document.getElementById('ls');
+		var lm = document.getElementById('lm');
+		var AU = document.getElementById('AU');
+		var ly = document.getElementById('ly');
+		var pc = document.getElementById('pc');
+		pm.value = eval(mm.value) / 0.000000001;
+		nm.value = eval(mm.value) / 0.000001;
+		um.value = eval(mm.value) / 0.001;
+		mm.value = eval(mm.value) / 1;
+		cm.value = eval(mm.value) / 10;
+		inch.value = eval(mm.value) / 25.4;
+		ft.value = eval(mm.value) / 304.8;
+		yd.value = eval(mm.value) / 914.4;
+		m.value = eval(mm.value) / 1000;
+		km.value = eval(mm.value) / 1000000;
+		mi.value = eval(mm.value) / 1609344;
+		n_mile.value = eval(mm.value) / 1852000;
+		ls.value = eval(mm.value) / 299792458000;
+		lm.value = eval(mm.value) / 17987547480000;
+		AU.value = eval(mm.value) / 149597870700000;
+		ly.value = eval(mm.value) / 9460730472580800512;
+		pc.value = eval(mm.value) / 30856775814671917056;
+	}
+	function cm(){
+		var pm = document.getElementById('pm');
+		var nm = document.getElementById('nm');
+		var um = document.getElementById('um');
+		var mm = document.getElementById('mm');
+		var cm = document.getElementById('cm');
+		var inch = document.getElementById('inch');
+		var ft = document.getElementById('ft');
+		var yd = document.getElementById('yd');
+		var m = document.getElementById('m');
+		var km = document.getElementById('km');
+		var mi = document.getElementById('mi');
+		var n_mile = document.getElementById('n_mile');
+		var ls = document.getElementById('ls');
+		var lm = document.getElementById('lm');
+		var AU = document.getElementById('AU');
+		var ly = document.getElementById('ly');
+		var pc = document.getElementById('pc');
+		pm.value = eval(cm.value) / 0.0000000001;
+		nm.value = eval(cm.value) / 0.0000001;
+		um.value = eval(cm.value) / 0.0001;
+		mm.value = eval(cm.value) / 0.1;
+		cm.value = eval(cm.value) / 1;
+		inch.value = eval(cm.value) / 2.54;
+		ft.value = eval(cm.value) / 30.48;
+		yd.value = eval(cm.value) / 91.44;
+		m.value = eval(cm.value) / 100;
+		km.value = eval(cm.value) / 100000;
+		mi.value = eval(cm.value) / 160934.4;
+		n_mile.value = eval(cm.value) / 185200;
+		ls.value = eval(cm.value) / 29979245800;
+		lm.value = eval(cm.value) / 1798754748000;
+		AU.value = eval(cm.value) / 14959787070000;
+		ly.value = eval(cm.value) / 946073047258080000;
+		pc.value = eval(cm.value) / 3085677581467191808;
+	}
+	function inch(){
+		var pm = document.getElementById('pm');
+		var nm = document.getElementById('nm');
+		var um = document.getElementById('um');
+		var mm = document.getElementById('mm');
+		var cm = document.getElementById('cm');
+		var inch = document.getElementById('inch');
+		var ft = document.getElementById('ft');
+		var yd = document.getElementById('yd');
+		var m = document.getElementById('m');
+		var km = document.getElementById('km');
+		var mi = document.getElementById('mi');
+		var n_mile = document.getElementById('n_mile');
+		var ls = document.getElementById('ls');
+		var lm = document.getElementById('lm');
+		var AU = document.getElementById('AU');
+		var ly = document.getElementById('ly');
+		var pc = document.getElementById('pc');
+		pm.value = eval(inch.value) / 0.000000000039;
+		nm.value = eval(inch.value) / 0.000000039;
+		um.value = eval(inch.value) / 0.000039;
+		mm.value = eval(inch.value) / 0.0394;
+		cm.value = eval(inch.value) / 0.3937;
+		inch.value = eval(inch.value) / 1;
+		ft.value = eval(inch.value) / 12;
+		yd.value = eval(inch.value) / 36;
+		m.value = eval(inch.value) / 39.3701;
+		km.value = eval(inch.value) / 39370.0787;
+		mi.value = eval(inch.value) / 63360;
+		n_mile.value = eval(inch.value) / 72913.3858;
+		ls.value = eval(inch.value) / 11802852677.1654;
+		lm.value = eval(inch.value) / 708171160629.9213;
+		AU.value = eval(inch.value) / 5889679948818.8975;
+		ly.value = eval(inch.value) / 372469703644913408;
+		pc.value = eval(inch.value) / 1214833693491020288;
+	}
+	function ft(){
+		var pm = document.getElementById('pm');
+		var nm = document.getElementById('nm');
+		var um = document.getElementById('um');
+		var mm = document.getElementById('mm');
+		var cm = document.getElementById('cm');
+		var inch = document.getElementById('inch');
+		var ft = document.getElementById('ft');
+		var yd = document.getElementById('yd');
+		var m = document.getElementById('m');
+		var km = document.getElementById('km');
+		var mi = document.getElementById('mi');
+		var n_mile = document.getElementById('n_mile');
+		var ls = document.getElementById('ls');
+		var lm = document.getElementById('lm');
+		var AU = document.getElementById('AU');
+		var ly = document.getElementById('ly');
+		var pc = document.getElementById('pc');
+		pm.value = eval(ft.value) / 0.0000000000033;
+		nm.value = eval(ft.value) / 0.0000000033;
+		um.value = eval(ft.value) / 0.0000033;
+		mm.value = eval(ft.value) / 0.0033;
+		cm.value = eval(ft.value) / 0.0328;
+		inch.value = eval(ft.value) / 0.0833;
+		ft.value = eval(ft.value) / 1;
+		yd.value = eval(ft.value) / 3;
+		m.value = eval(ft.value) / 3.2808;
+		km.value = eval(ft.value) / 3280.8399;
+		mi.value = eval(ft.value) / 5280;
+		n_mile.value = eval(ft.value) / 6076.1155
+		ls.value = eval(ft.value) / 983571056.4304;
+		lm.value = eval(ft.value) / 59014263385.8268;
+		AU.value = eval(ft.value) / 490806662401.5748;
+		ly.value = eval(ft.value) / 31039141970409448;
+		pc.value = eval(ft.value) / 101236141124251696;
+	}
+	function yd(){
+		var pm = document.getElementById('pm');
+		var nm = document.getElementById('nm');
+		var um = document.getElementById('um');
+		var mm = document.getElementById('mm');
+		var cm = document.getElementById('cm');
+		var inch = document.getElementById('inch');
+		var ft = document.getElementById('ft');
+		var yd = document.getElementById('yd');
+		var m = document.getElementById('m');
+		var km = document.getElementById('km');
+		var mi = document.getElementById('mi');
+		var n_mile = document.getElementById('n_mile');
+		var ls = document.getElementById('ls');
+		var lm = document.getElementById('lm');
+		var AU = document.getElementById('AU');
+		var ly = document.getElementById('ly');
+		var pc = document.getElementById('pc');
+		pm.value = eval(yd.value) / 0.0000000000011;
+		nm.value = eval(yd.value) / 0.0000000011;
+		um.value = eval(yd.value) / 0.0000011;
+		mm.value = eval(yd.value) / 0.0011;
+		cm.value = eval(yd.value) / 0.0109;
+		inch.value = eval(yd.value) / 0.0278;
+		ft.value = eval(yd.value) / 0.3333;
+		m.value = eval(yd.value) / 1.0936;
+		km.value = eval(yd.value) / 1093.6133;
+		mi.value = eval(yd.value) / 1760;
+		n_mile.value = eval(yd.value) / 2025.3718;
+		ls.value = eval(yd.value) / 327857018.8101;
+		lm.value = eval(yd.value) / 19671421128.6089;
+		AU.value = eval(yd.value) / 163602220800.5249;
+		ly.value = eval(yd.value) / 10346380656803150;
+		pc.value = eval(yd.value) / 33745380374750564;
+	}
+	function m(){
+		var pm = document.getElementById('pm');
+		var nm = document.getElementById('nm');
+		var um = document.getElementById('um');
+		var mm = document.getElementById('mm');
+		var cm = document.getElementById('cm');
+		var inch = document.getElementById('inch');
+		var ft = document.getElementById('ft');
+		var yd = document.getElementById('yd');
+		var m = document.getElementById('m');
+		var km = document.getElementById('km');
+		var mi = document.getElementById('mi');
+		var n_mile = document.getElementById('n_mile');
+		var ls = document.getElementById('ls');
+		var lm = document.getElementById('lm');
+		var AU = document.getElementById('AU');
+		var ly = document.getElementById('ly');
+		var pc = document.getElementById('pc');
+		pm.value = eval(m.value) / 0.000000000001;
+		nm.value = eval(m.value) / 0.000000001;
+		um.value = eval(m.value) / 0.000001;
+		mm.value = eval(m.value) / 0.001;
+		cm.value = eval(m.value) / 0.01;
+		inch.value = eval(m.value) / 0.0254;
+		ft.value = eval(m.value) / 0.3048;
+		yd.value = eval(m.value) / 0.9144;
+		m.value = eval(m.value) / 1;
+		km.value = eval(m.value) / 1000;
+		mi.value = eval(m.value) / 1609.344;
+		n_mile.value = eval(m.value) / 1852;
+		ls.value = eval(m.value) / 299792458;
+		lm.value = eval(m.value) / 17987547480;
+		AU.value = eval(m.value) / 149597870700;
+		ly.value = eval(m.value) / 9460730472580800;
+		pc.value = eval(m.value) / 30856775814671916; 
+	}
+	function km(){
+		var pm = document.getElementById('pm');
+		var nm = document.getElementById('nm');
+		var um = document.getElementById('um');
+		var mm = document.getElementById('mm');
+		var cm = document.getElementById('cm');
+		var inch = document.getElementById('inch');
+		var ft = document.getElementById('ft');
+		var yd = document.getElementById('yd');
+		var m = document.getElementById('m');
+		var km = document.getElementById('km');
+		var mi = document.getElementById('mi');
+		var n_mile = document.getElementById('n_mile');
+		var ls = document.getElementById('ls');
+		var lm = document.getElementById('lm');
+		var AU = document.getElementById('AU');
+		var ly = document.getElementById('ly');
+		var pc = document.getElementById('pc');
+		pm.value = eval(km.value) / 0.000000000000001;
+		nm.value = eval(km.value) / 0.000000000001;
+		um.value = eval(km.value) / 0.000000001;
+		mm.value = eval(km.value) / 0.000001;
+		cm.value = eval(km.value) / 0.00001;
+		inch.value = eval(km.value) / 0.000025;
+		ft.value = eval(km.value) / 0.0003;
+		yd.value = eval(km.value) / 0.00091;
+		m.value = eval(km.value) / 0.001;
+		km.value = eval(km.value) / 1;
+		mi.value = eval(km.value) / 1.6093;
+		n_mile.value = eval(km.value) / 1.852;
+		ls.value = eval(km.value) / 299792.458;
+		lm.value = eval(km.value) / 17987547.48;
+		AU.value = eval(km.value) / 149597870.7;
+		ly.value = eval(km.value) / 9460730472580.8008;
+		pc.value = eval(km.value) / 30856775814671.9141;
+	}
+	function mi(){
+		var pm = document.getElementById('pm');
+		var nm = document.getElementById('nm');
+		var um = document.getElementById('um');
+		var mm = document.getElementById('mm');
+		var cm = document.getElementById('cm');
+		var inch = document.getElementById('inch');
+		var ft = document.getElementById('ft');
+		var yd = document.getElementById('yd');
+		var m = document.getElementById('m');
+		var km = document.getElementById('km');
+		var mi = document.getElementById('mi');
+		var n_mile = document.getElementById('n_mile');
+		var ls = document.getElementById('ls');
+		var lm = document.getElementById('lm');
+		var AU = document.getElementById('AU');
+		var ly = document.getElementById('ly');
+		var pc = document.getElementById('pc');
+		pm.value = eval(mi.value) / 0.00000000000000062;
+		nm.value = eval(mi.value) / 0.00000000000062;
+		um.value = eval(mi.value) / 0.00000000062;
+		mm.value = eval(mi.value) / 0.00000062;
+		cm.value = eval(mi.value) / 0.0000062;
+		inch.value = eval(mi.value) / 0.000016;
+		ft.value = eval(mi.value) / 0.00019;
+		yd.value = eval(mi.value) / 0.00057;
+		m.value = eval(mi.value) / 0.00062;
+		km.value = eval(mi.value) / 0.6214;
+		mi.value = eval(mi.value) / 1;
+		n_mile.value = eval(mi.value) / 1.1508;
+		ls.value = eval(mi.value) / 186282.3971;
+		lm.value = eval(mi.value) / 11176943.8231;
+		AU.value = eval(mi.value) / 92955807.273;
+		ly.value = eval(mi.value) / 5878625373183.6074;
+		pc.value = eval(mi.value) / 19173511576562.8203;
+	}
+	function n_mile(){
+		var pm = document.getElementById('pm');
+		var nm = document.getElementById('nm');
+		var um = document.getElementById('um');
+		var mm = document.getElementById('mm');
+		var cm = document.getElementById('cm');
+		var inch = document.getElementById('inch');
+		var ft = document.getElementById('ft');
+		var yd = document.getElementById('yd');
+		var m = document.getElementById('m');
+		var km = document.getElementById('km');
+		var mi = document.getElementById('mi');
+		var n_mile = document.getElementById('n_mile');
+		var ls = document.getElementById('ls');
+		var lm = document.getElementById('lm');
+		var AU = document.getElementById('AU');
+		var ly = document.getElementById('ly');
+		var pc = document.getElementById('pc');
+		pm.value = eval(n_mile.value) / 0.00000000000000054;
+		nm.value = eval(n_mile.value) / 0.00000000000054;
+		um.value = eval(n_mile.value) / 0.00000000054;
+		mm.value = eval(n_mile.value) / 0.00000054;
+		cm.value = eval(n_mile.value) / 0.0000054;
+		inch.value = eval(n_mile.value) / 0.000014;
+		ft.value = eval(n_mile.value) / 0.00016;
+		yd.value = eval(n_mile.value) / 0.00049;
+		m.value = eval(n_mile.value) / 0.00054;
+		km.value = eval(n_mile.value) / 0.54;
+		mi.value = eval(n_mile.value) / 0.869;
+		n_mile.value = eval(n_mile.value) / 1;
+		ls.value = eval(n_mile.value) / 161874.9773;
+		lm.value = eval(n_mile.value) / 9712498.6393;
+		AU.value = eval(n_mile.value) / 80776388.067;
+		ly.value = eval(n_mile.value) / 5108385784330.8857;
+		pc.value = eval(n_mile.value) / 16661326033840.127;
+	}
+	function ls(){
+		var pm = document.getElementById('pm');
+		var nm = document.getElementById('nm');
+		var um = document.getElementById('um');
+		var mm = document.getElementById('mm');
+		var cm = document.getElementById('cm');
+		var inch = document.getElementById('inch');
+		var ft = document.getElementById('ft');
+		var yd = document.getElementById('yd');
+		var m = document.getElementById('m');
+		var km = document.getElementById('km');
+		var mi = document.getElementById('mi');
+		var n_mile = document.getElementById('n_mile');
+		var ls = document.getElementById('ls');
+		var lm = document.getElementById('lm');
+		var AU = document.getElementById('AU');
+		var ly = document.getElementById('ly');
+		var pc = document.getElementById('pc');
+		pm.value = eval(ls.value) / 0.0000000000000000000033;
+		nm.value = eval(ls.value) / 0.0000000000000000033;
+		um.value = eval(ls.value) / 0.0000000000000033;
+		mm.value = eval(ls.value) / 0.0000000000033;
+		cm.value = eval(ls.value) / 0.000000000033;
+		inch.value = eval(ls.value) / 0.000000000085;
+		ft.value = eval(ls.value) / 0.000000001;
+		yd.value = eval(ls.value) / 0.0000000031;
+		m.value = eval(ls.value) / 0.0000000033;
+		km.value = eval(ls.value) / 0.0000033;
+		mi.value = eval(ls.value) / 0.0000054;
+		n_mile.value = eval(ls.value) / 0.0000062;
+		ls.value = eval(ls.value) / 1;
+		lm.value = eval(ls.value) / 60;
+		AU.value = eval(ls.value) / 499.0048;
+		ly.value = eval(ls.value) / 31557600;
+		pc.value = eval(ls.value) / 102927125.0535;
+	}
+	function lm(){
+		var pm = document.getElementById('pm');
+		var nm = document.getElementById('nm');
+		var um = document.getElementById('um');
+		var mm = document.getElementById('mm');
+		var cm = document.getElementById('cm');
+		var inch = document.getElementById('inch');
+		var ft = document.getElementById('ft');
+		var yd = document.getElementById('yd');
+		var m = document.getElementById('m');
+		var km = document.getElementById('km');
+		var mi = document.getElementById('mi');
+		var n_mile = document.getElementById('n_mile');
+		var ls = document.getElementById('ls');
+		var lm = document.getElementById('lm');
+		var AU = document.getElementById('AU');
+		var ly = document.getElementById('ly');
+		var pc = document.getElementById('pc');
+		pm.value = eval(lm.value) / 0.000000000000000000000056;
+		nm.value = eval(lm.value) / 0.000000000000000000056;
+		um.value = eval(lm.value) / 0.000000000000000056;
+		mm.value = eval(lm.value) / 0.000000000000056;
+		cm.value = eval(lm.value) / 0.00000000000056;
+		inch.value = eval(lm.value) / 0.0000000000014;
+		ft.value = eval(lm.value) / 0.000000000017;
+		yd.value = eval(lm.value) / 0.000000000051;
+		m.value = eval(lm.value) / 0.000000000056;
+		km.value = eval(lm.value) / 0.000000056;
+		mi.value = eval(lm.value) / 0.000000089;
+		n_mile.value = eval(lm.value) / 0.0000001;
+		ls.value = eval(lm.value) / 0.0167;
+		lm.value = eval(lm.value) / 1;
+		AU.value = eval(lm.value) / 8.3167;
+		ly.value = eval(lm.value) / 525960;
+		pc.value = eval(lm.value) / 1715452.0842;
+	}
+	function AU(){
+		var pm = document.getElementById('pm');
+		var nm = document.getElementById('nm');
+		var um = document.getElementById('um');
+		var mm = document.getElementById('mm');
+		var cm = document.getElementById('cm');
+		var inch = document.getElementById('inch');
+		var ft = document.getElementById('ft');
+		var yd = document.getElementById('yd');
+		var m = document.getElementById('m');
+		var km = document.getElementById('km');
+		var mi = document.getElementById('mi');
+		var n_mile = document.getElementById('n_mile');
+		var ls = document.getElementById('ls');
+		var lm = document.getElementById('lm');
+		var AU = document.getElementById('AU');
+		var ly = document.getElementById('ly');
+		var pc = document.getElementById('pc');
+		pm.value = eval(AU.value) / 0.0000000000000000000000067;
+		nm.value = eval(AU.value) / 0.0000000000000000000067;
+		um.value = eval(AU.value) / 0.0000000000000000067;
+		mm.value = eval(AU.value) / 0.0000000000000067;
+		cm.value = eval(AU.value) / 0.000000000000067;
+		inch.value = eval(AU.value) / 0.00000000000017;
+		ft.value = eval(AU.value) / 0.000000000002;
+		yd.value = eval(AU.value) / 0.0000000000061;
+		m.value = eval(AU.value) / 0.0000000000067;
+		km.value = eval(AU.value) / 0.0000000067;
+		mi.value = eval(AU.value) / 0.000000011;
+		n_mile.value = eval(AU.value) / 0.000000012;
+		ls.value = eval(AU.value) / 0.002;
+		lm.value = eval(AU.value) / 0.1202;
+		AU.value = eval(AU.value) / 1;
+		ly.value = eval(AU.value) / 63241.0771;
+		pc.value = eval(AU.value) / 206264.8062;
+	}
+	function ly(){
+		var pm = document.getElementById('pm');
+		var nm = document.getElementById('nm');
+		var um = document.getElementById('um');
+		var mm = document.getElementById('mm');
+		var cm = document.getElementById('cm');
+		var inch = document.getElementById('inch');
+		var ft = document.getElementById('ft');
+		var yd = document.getElementById('yd');
+		var m = document.getElementById('m');
+		var km = document.getElementById('km');
+		var mi = document.getElementById('mi');
+		var n_mile = document.getElementById('n_mile');
+		var ls = document.getElementById('ls');
+		var lm = document.getElementById('lm');
+		var AU = document.getElementById('AU');
+		var ly = document.getElementById('ly');
+		var pc = document.getElementById('pc');
+		pm.value = eval(ly.value) / 0.00000000000000000000000000011;
+		nm.value = eval(ly.value) / 0.00000000000000000000000011;
+		um.value = eval(ly.value) / 0.00000000000000000000011;
+		mm.value = eval(ly.value) / 0.00000000000000000011;
+		cm.value = eval(ly.value) / 0.0000000000000000011;
+		inch.value = eval(ly.value) / 0.0000000000000000027;
+		ft.value = eval(ly.value) / 0.000000000000000032;
+		yd.value = eval(ly.value) / 0.000000000000000097;
+		m.value = eval(ly.value) / 0.00000000000000011;
+		km.value = eval(ly.value) / 0.00000000000011;
+		mi.value = eval(ly.value) / 0.00000000000017;
+		n_mile.value = eval(ly.value) / 0.0000000000002;
+		ls.value = eval(ly.value) / 0.000000032;
+		lm.value = eval(ly.value) / 0.0000019;
+		AU.value = eval(ly.value) / 0.000016;
+		ly.value = eval(ly.value) / 1;
+		pc.value = eval(ly.value) / 3.2616;
+	}
+	function pc(){
+		var pm = document.getElementById('pm');
+		var nm = document.getElementById('nm');
+		var um = document.getElementById('um');
+		var mm = document.getElementById('mm');
+		var cm = document.getElementById('cm');
+		var inch = document.getElementById('inch');
+		var ft = document.getElementById('ft');
+		var yd = document.getElementById('yd');
+		var m = document.getElementById('m');
+		var km = document.getElementById('km');
+		var mi = document.getElementById('mi');
+		var n_mile = document.getElementById('n_mile');
+		var ls = document.getElementById('ls');
+		var lm = document.getElementById('lm');
+		var AU = document.getElementById('AU');
+		var ly = document.getElementById('ly');
+		var pc = document.getElementById('pc');
+		pm.value = eval(pc.value) / 0.000000000000000000000000000032;
+		nm.value = eval(pc.value) / 0.000000000000000000000000032;
+		um.value = eval(pc.value) / 0.000000000000000000000032;
+		mm.value = eval(pc.value) / 0.000000000000000000032;
+		cm.value = eval(pc.value) / 0.00000000000000000032;
+		inch.value = eval(pc.value) / 0.00000000000000000082;
+		ft.value = eval(pc.value) / 0.0000000000000000099;
+		yd.value = eval(pc.value) / 0.00000000000000003;
+		m.value = eval(pc.value) / 0.000000000000000032;
+		km.value = eval(pc.value) / 0.000000000000032;
+		mi.value = eval(pc.value) / 0.000000000000052;
+		n_mile.value = eval(pc.value) / 0.00000000000006;
+		ls.value = eval(pc.value) / 0.0000000097;
+		lm.value = eval(pc.value) / 0.00000058;
+		AU.value = eval(pc.value) / 0.0000048;
+		ly.value = eval(pc.value) / 0.3066;
+		pc.value = eval(pc.value) / 1;
+	}
+</script>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        Prime Factorization
+    </title>
+    <head>
+        <style>
+            #pnum {
+                width: 185px;
+            }
+            #pans {
+                width: 1420px;
+                border:0;outline:0;
+            }
+        </style>
+        <span style="font-size: 3em;">
+            Prime factorization
+        </span>
+    </head>
+    <body>
+        <br>
+        <form>
+            <a>input a number:</a><input type="number" name="input number" id="pnum" onkeyup="javascript:prime()" onchange="javascript:prime()"/>
+            <br><br>
+            <a>answer:</a>
+            <div id="pans"></div>
+        </form>
+        <br><br>
+		<a href="main.html">back</a>
+    </body>
+</html>
+<script>
+    function prime(){
+        const nu=document.getElementById("pnum");
+        let n=eval(nu.value),all=[],p=2;
+        if(n<0){
+            document.getElementById("pans").innerText="nonnegative integer only";
+            process.exit();
+        }
+        else if(n===0){
+            document.getElementById("pans").innerText=0;
+            process.exit();
+        }
+        else if(n===1){
+            document.getElementById("pans").innerText=1;
+            process.exit();
+        }
+        while(n>1){
+            if(n%p===0){
+                all.push(p);
+                n/=p;
+                p=2;
+            }
+            else{
+                p++;
+            }
+        }
+        let ALL=[all[0]],mon=[1],l="";
+        for(let a=1;a<all.length;a++){
+            if(all[a]!=all[a-1]){
+                ALL.push(all[a]);
+                mon.push(1);
+            }
+            else{
+                mon[mon.length-1]++;
+            }
+        }
+        for(let a=0;a<ALL.length;a++){
+            l+=ALL[a];
+            l+="^";
+            l+=mon[a];
+            if(a!=ALL.length-1){
+                l+="*";
+            }
+        }
+        document.getElementById("pans").innerText=l;
+    }
+</script>
